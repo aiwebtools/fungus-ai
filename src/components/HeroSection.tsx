@@ -72,7 +72,8 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
-          <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 glass-effect px-5 py-2 rounded-full text-sm backdrop-blur-md">
+          {/* Fixed positioning of the "Powered by AI" badge */}
+          <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 glass-effect px-5 py-2 rounded-full text-sm backdrop-blur-md">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-fungus-green"></div>
               <span>Powered by AI</span>
