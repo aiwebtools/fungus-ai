@@ -1,7 +1,8 @@
 
 import React, { useState } from "react";
 import { useInView } from "react-intersection-observer";
-import { Play } from "lucide-react";
+import { Play, ExternalLink } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const VideoSection = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -86,10 +87,21 @@ const VideoSection = () => {
             </div>
           </div>
 
-          <div className="text-center mt-6">
+          <div className="text-center mt-6 mb-10">
             <p className="text-sm text-white/60 italic">
               Experience the visual world of Fungus Whisperer GPT
             </p>
+          </div>
+          
+          {/* New Button Below Images */}
+          <div className="text-center mt-8">
+            <Button 
+              onClick={() => window.open("https://chatgpt.com/g/g-67d872788c488191aab35cf0b0ee7152-fungus-whisperer-gpt", "_blank")}
+              size="lg"
+              className="bg-gradient-to-r from-fungus-purple to-fungus-blue hover:opacity-90 transition-opacity"
+            >
+              Try Fungus Whisperer GPT <ExternalLink className="ml-2" size={18} />
+            </Button>
           </div>
         </div>
       </div>
