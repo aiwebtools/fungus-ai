@@ -11,10 +11,6 @@ const VideoSection = () => {
     triggerOnce: true,
   });
 
-  const handlePlayClick = () => {
-    window.open("https://ideogram.ai/assets/image/lossless/response/b_WjdmTfSfiuXjKBU7Iq-Q", "_blank");
-  };
-
   return (
     <section
       ref={ref}
@@ -95,13 +91,18 @@ const VideoSection = () => {
           
           {/* New Button Below Images */}
           <div className="text-center mt-8">
-            <Button 
-              onClick={() => window.open("https://chatgpt.com/g/g-67d872788c488191aab35cf0b0ee7152-fungus-whisperer-gpt", "_blank")}
-              size="lg"
-              className="bg-gradient-to-r from-fungus-purple to-fungus-blue hover:opacity-90 transition-opacity"
+            <a 
+              href="https://chatgpt.com/g/g-67d872788c488191aab35cf0b0ee7152-fungus-whisperer-gpt"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Try Fungus Whisperer GPT <ExternalLink className="ml-2" size={18} />
-            </Button>
+              <Button 
+                size="lg"
+                className="bg-gradient-to-r from-fungus-purple to-fungus-blue hover:opacity-90 transition-opacity"
+              >
+                Try Fungus Whisperer GPT <ExternalLink className="ml-2" size={18} />
+              </Button>
+            </a>
           </div>
         </div>
       </div>
