@@ -1,0 +1,88 @@
+
+import React, { useState } from "react";
+import { useInView } from "react-intersection-observer";
+import { Play } from "lucide-react";
+
+const VideoSection = () => {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const { ref, inView } = useInView({
+    threshold: 0.3,
+    triggerOnce: true,
+  });
+
+  const handlePlayClick = () => {
+    window.open("https://ideogram.ai/assets/image/lossless/response/b_WjdmTfSfiuXjKBU7Iq-Q", "_blank");
+  };
+
+  return (
+    <section
+      ref={ref}
+      className="py-24 relative bg-gradient-to-b from-fungus-dark/80 to-fungus-dark overflow-hidden"
+    >
+      <div className="container mx-auto px-4">
+        <div className="max-w-5xl mx-auto text-center mb-12">
+          <div
+            className={`transition-all duration-700 ${
+              inView ? "opacity-100" : "opacity-0 translate-y-10"
+            }`}
+          >
+            <span className="inline-block text-xs font-semibold uppercase tracking-wider text-fungus-cyan bg-fungus-cyan/10 px-3 py-1 rounded-full mb-3">
+              Explore
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              See <span className="text-gradient">Fungus Whisperer</span> in Action
+            </h2>
+            <p className="text-white/70 text-lg max-w-3xl mx-auto">
+              Watch how our AI guide provides expert mushroom knowledge, foraging
+              tips, and culinary inspiration in real-time.
+            </p>
+          </div>
+        </div>
+
+        <div
+          className={`transition-all duration-700 delay-200 ${
+            inView ? "opacity-100" : "opacity-0 translate-y-10"
+          }`}
+        >
+          <div className="relative mx-auto max-w-4xl rounded-2xl overflow-hidden group">
+            <div className="aspect-video bg-black relative">
+              {/* Video Thumbnail */}
+              <img
+                src="https://ideogram.ai/assets/image/lossless/response/b_WjdmTfSfiuXjKBU7Iq-Q"
+                alt="Fungus Whisperer GPT Demo"
+                className="w-full h-full object-cover"
+              />
+
+              {/* Play Button Overlay */}
+              <div
+                className="absolute inset-0 flex items-center justify-center bg-black/30 backdrop-blur-sm transition-opacity cursor-pointer"
+                onClick={handlePlayClick}
+              >
+                <div className="w-20 h-20 rounded-full bg-white/10 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <Play
+                    size={36}
+                    className="text-white ml-1"
+                    fill="white"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Gradient Border Effect */}
+            <div className="absolute inset-0 rounded-2xl p-[1px] pointer-events-none">
+              <div className="w-full h-full rounded-2xl bg-gradient-to-r from-fungus-purple/30 via-fungus-blue/30 to-fungus-purple/30 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            </div>
+          </div>
+
+          <div className="text-center mt-6">
+            <p className="text-sm text-white/60 italic">
+              Click to explore our interactive demo
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default VideoSection;
