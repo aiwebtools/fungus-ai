@@ -119,14 +119,14 @@ const Header = () => {
           <div className="flex flex-col py-4 px-6 space-y-3">
             <Button
               variant="ghost"
-              className="text-white/80 justify-start hover:text-white hover:bg-white/10"
+              className="text-white justify-start bg-fungus-dark/80 hover:text-white hover:bg-fungus-dark"
               onClick={() => scrollToSection("faq")}
             >
               FAQ
             </Button>
             <Button
               variant="ghost"
-              className="text-white/80 justify-start hover:text-white hover:bg-white/10"
+              className="text-white justify-start bg-fungus-dark/80 hover:text-white hover:bg-fungus-dark"
               onClick={() => scrollToSection("disclaimer")}
             >
               Disclaimer
@@ -139,7 +139,7 @@ const Header = () => {
             >
               <Button
                 variant="ghost"
-                className="text-white/80 justify-start hover:text-white hover:bg-white/10 w-full"
+                className="text-white justify-start bg-fungus-dark/80 hover:text-white hover:bg-fungus-dark w-full"
               >
                 More AI Tools
               </Button>
@@ -162,3 +162,4 @@ const Header = () => {
 };
 
 export default Header;
+
