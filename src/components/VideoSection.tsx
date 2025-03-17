@@ -44,39 +44,62 @@ const VideoSection = () => {
             inView ? "opacity-100" : "opacity-0 translate-y-10"
           }`}
         >
-          <div className="relative mx-auto max-w-4xl rounded-2xl overflow-hidden group">
-            <div className="aspect-video bg-black relative">
-              {/* Video Thumbnail */}
-              <img
-                src="https://ideogram.ai/assets/image/lossless/response/b_WjdmTfSfiuXjKBU7Iq-Q"
-                alt="Fungus Whisperer GPT Demo"
-                className="w-full h-full object-cover"
-              />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {/* First Video */}
+            <div className="relative rounded-2xl overflow-hidden group">
+              <div className="aspect-video bg-black relative">
+                {/* Video Thumbnail */}
+                <img
+                  src="https://ideogram.ai/assets/image/lossless/response/b_WjdmTfSfiuXjKBU7Iq-Q"
+                  alt="Fungus Whisperer GPT Demo"
+                  className="w-full h-full object-cover"
+                />
 
-              {/* Play Button Overlay */}
-              <div
-                className="absolute inset-0 flex items-center justify-center bg-black/30 backdrop-blur-sm transition-opacity cursor-pointer"
-                onClick={handlePlayClick}
-              >
-                <div className="w-20 h-20 rounded-full bg-white/10 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <Play
-                    size={36}
-                    className="text-white ml-1"
-                    fill="white"
-                  />
+                {/* Play Button Overlay */}
+                <div
+                  className="absolute inset-0 flex items-center justify-center bg-black/30 backdrop-blur-sm transition-opacity cursor-pointer"
+                  onClick={handlePlayClick}
+                >
+                  <div className="w-20 h-20 rounded-full bg-white/10 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Play
+                      size={36}
+                      className="text-white ml-1"
+                      fill="white"
+                    />
+                  </div>
                 </div>
+              </div>
+
+              {/* Gradient Border Effect */}
+              <div className="absolute inset-0 rounded-2xl p-[1px] pointer-events-none">
+                <div className="w-full h-full rounded-2xl bg-gradient-to-r from-fungus-purple/30 via-fungus-blue/30 to-fungus-purple/30 opacity-0 group-hover:opacity-100 transition-opacity"></div>
               </div>
             </div>
 
-            {/* Gradient Border Effect */}
-            <div className="absolute inset-0 rounded-2xl p-[1px] pointer-events-none">
-              <div className="w-full h-full rounded-2xl bg-gradient-to-r from-fungus-purple/30 via-fungus-blue/30 to-fungus-purple/30 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            {/* New Image */}
+            <div className="relative rounded-2xl overflow-hidden group">
+              <div className="aspect-video bg-black relative">
+                {/* New Image */}
+                <img
+                  src="https://ideogram.ai/assets/image/lossless/response/9DLLjKWGSeSlKMxHMhuHoA"
+                  alt="Fungus Whisperer GPT Visual"
+                  className="w-full h-full object-cover"
+                />
+
+                {/* Hover Effect */}
+                <div className="absolute inset-0 bg-black/20 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              </div>
+
+              {/* Gradient Border Effect */}
+              <div className="absolute inset-0 rounded-2xl p-[1px] pointer-events-none">
+                <div className="w-full h-full rounded-2xl bg-gradient-to-r from-fungus-green/30 via-fungus-blue/30 to-fungus-green/30 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              </div>
             </div>
           </div>
 
           <div className="text-center mt-6">
             <p className="text-sm text-white/60 italic">
-              Click to explore our interactive demo
+              Experience the visual world of Fungus Whisperer GPT
             </p>
           </div>
         </div>
