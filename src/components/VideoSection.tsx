@@ -45,29 +45,18 @@ const VideoSection = () => {
           }`}
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {/* First Video */}
+            {/* First Image - No Play Button */}
             <div className="relative rounded-2xl overflow-hidden group">
               <div className="aspect-video bg-black relative">
-                {/* Video Thumbnail */}
+                {/* Image */}
                 <img
                   src="https://ideogram.ai/assets/image/lossless/response/b_WjdmTfSfiuXjKBU7Iq-Q"
                   alt="Fungus Whisperer GPT Demo"
                   className="w-full h-full object-cover"
                 />
 
-                {/* Play Button Overlay */}
-                <div
-                  className="absolute inset-0 flex items-center justify-center bg-black/30 backdrop-blur-sm transition-opacity cursor-pointer"
-                  onClick={handlePlayClick}
-                >
-                  <div className="w-20 h-20 rounded-full bg-white/10 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <Play
-                      size={36}
-                      className="text-white ml-1"
-                      fill="white"
-                    />
-                  </div>
-                </div>
+                {/* Hover Effect */}
+                <div className="absolute inset-0 bg-black/20 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity"></div>
               </div>
 
               {/* Gradient Border Effect */}
@@ -76,7 +65,7 @@ const VideoSection = () => {
               </div>
             </div>
 
-            {/* New Image */}
+            {/* Second Image */}
             <div className="relative rounded-2xl overflow-hidden group">
               <div className="aspect-video bg-black relative">
                 {/* New Image */}
