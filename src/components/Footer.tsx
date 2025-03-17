@@ -32,7 +32,15 @@ const Footer = () => {
                   Fungus Whisperer GPT
                 </h3>
                 <p className="text-xs text-white/60">
-                  Your expert guide to the fascinating world of fungi
+                  Presented by{" "}
+                  <a
+                    href="https://www.aiwebtools.ai"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline hover:text-fungus-cyan transition-colors"
+                  >
+                    AiWebTools.Ai
+                  </a>
                 </p>
               </div>
             </a>
