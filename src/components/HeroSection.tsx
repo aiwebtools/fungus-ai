@@ -43,7 +43,7 @@ const HeroSection = () => {
             creative culinary applications with scientifically accurate guidance.
           </p>
           
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-4 mb-8">
             <a
               href="https://chatgpt.com/g/g-67d872788c488191aab35cf0b0ee7152-fungus-whisperer-gpt"
               target="_blank"
@@ -60,6 +60,20 @@ const HeroSection = () => {
             >
               Learn More <Sparkles className="ml-2 h-5 w-5" />
             </Button>
+          </div>
+
+          {/* YouTube Video Embed */}
+          <div className="w-full max-w-2xl">
+            <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+              <iframe
+                className="absolute top-0 left-0 w-full h-full rounded-lg shadow-2xl"
+                src="https://www.youtube.com/embed/qzndRzBtrEU?autoplay=1&mute=0&quality=hd1080&rel=0&showinfo=0"
+                title="Fungus Whisperer GPT Demo"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
+            </div>
           </div>
         </div>
         
