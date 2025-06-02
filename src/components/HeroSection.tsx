@@ -12,61 +12,68 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex flex-col justify-center overflow-hidden pt-20">
-      {/* Background Glow Effects */}
-      <div className="absolute inset-0 bg-gradient-mushroom -z-10"></div>
-      <div 
-        className="absolute top-1/4 left-1/4 w-80 h-80 bg-fungus-purple/30 rounded-full filter blur-[100px] animate-pulse-glow -z-10"
-        style={{ "--glow-color": "rgba(139, 92, 246, 0.3)" } as React.CSSProperties}
-      ></div>
-      <div 
-        className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-fungus-blue/20 rounded-full filter blur-[100px] animate-pulse-glow animation-delay-1000 -z-10"
-        style={{ "--glow-color": "rgba(59, 130, 246, 0.2)" } as React.CSSProperties}
-      ></div>
+      {/* Divine Background Effects */}
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-fungus-dark via-pink-900/20 to-blue-900/30 -z-10"></div>
+      
+      {/* Multiple divine glow effects */}
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-purple-500/40 via-pink-500/30 to-blue-500/40 rounded-full filter blur-[120px] animate-pulse-glow -z-10"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-blue-500/30 via-cyan-500/40 to-purple-500/30 rounded-full filter blur-[120px] animate-pulse-glow -z-10" style={{ animationDelay: "1s" }}></div>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-yellow-400/10 via-pink-400/15 to-purple-400/10 rounded-full filter blur-[200px] animate-rotate-slow -z-10"></div>
+      
+      {/* Floating divine particles */}
+      <div className="absolute inset-0 opacity-40 -z-10">
+        <div className="absolute top-20 left-20 w-3 h-3 bg-purple-400 rounded-full animate-float"></div>
+        <div className="absolute top-40 right-32 w-2 h-2 bg-pink-400 rounded-full animate-float" style={{ animationDelay: "0.5s" }}></div>
+        <div className="absolute bottom-40 left-1/3 w-2 h-2 bg-blue-400 rounded-full animate-float" style={{ animationDelay: "1s" }}></div>
+        <div className="absolute top-1/3 right-1/4 w-3 h-3 bg-cyan-400 rounded-full animate-float" style={{ animationDelay: "1.5s" }}></div>
+        <div className="absolute bottom-32 right-20 w-2 h-2 bg-yellow-400 rounded-full animate-float" style={{ animationDelay: "2s" }}></div>
+      </div>
 
       <div className="container mx-auto px-4 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-12 z-10">
-        <div className={`max-w-2xl transition-all duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
-          <div className="inline-block rounded-full bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-1.5 mb-6">
+        <div className={`max-w-2xl transition-all duration-1000 ${isLoaded ? 'opacity-100 animate-scale-up' : 'opacity-0 translate-y-10'}`}>
+          <div className="inline-block rounded-full bg-gradient-to-r from-white/20 via-purple-500/20 to-pink-500/20 backdrop-blur-md border border-gradient-to-r from-purple-400/30 to-pink-400/30 px-4 py-1.5 mb-6 animate-shimmer">
             <div className="flex items-center">
-              <div className="w-2 h-2 rounded-full bg-fungus-green animate-pulse mr-2"></div>
-              <span className="text-sm font-medium">Now Available on ChatGPT</span>
+              <div className="w-2 h-2 rounded-full bg-gradient-to-r from-green-400 to-cyan-400 animate-pulse mr-2"></div>
+              <span className="text-sm font-medium bg-gradient-to-r from-purple-200 to-pink-200 bg-clip-text text-transparent">Now Available on ChatGPT</span>
             </div>
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            <span className="text-gradient">Fungus Whisperer GPT</span>
+            <span className="bg-gradient-to-r from-purple-300 via-pink-300 via-blue-300 to-cyan-300 bg-clip-text text-transparent animate-shimmer">Fungus Whisperer GPT</span>
             <br />
-            <span>Your Expert Mushroom Guide</span>
+            <span className="bg-gradient-to-r from-white via-purple-100 to-pink-100 bg-clip-text text-transparent">Your Expert Mushroom Guide</span>
           </h1>
           
-          <p className="text-xl text-white/80 mb-8 max-w-xl">
+          <p className="text-xl text-white/90 mb-8 max-w-xl leading-relaxed">
             Master the art of mushroom cultivation, learn safe foraging practices, and discover 
             creative culinary applications with scientifically accurate guidance.
           </p>
           
-          <div className="flex flex-wrap gap-4 mb-8">
+          <div className="flex flex-wrap gap-6 mb-12">
             <a
               href="https://chatgpt.com/g/g-67d872788c488191aab35cf0b0ee7152-fungus-whisperer-gpt"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button className="bg-gradient-to-r from-fungus-purple to-fungus-blue text-white px-8 py-6 rounded-lg hover:opacity-90 transition-opacity text-lg h-auto">
+              <Button className="bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 hover:from-purple-500 hover:via-pink-500 hover:to-blue-500 text-white px-8 py-6 rounded-lg transition-all duration-300 transform hover:scale-105 text-lg h-auto shadow-2xl hover:shadow-purple-500/25">
                 Try for Free <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </a>
             <Button 
               variant="outline" 
               onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
-              className="border-white/20 text-white hover:bg-white/10 px-8 py-6 rounded-lg h-auto text-lg"
+              className="border-2 border-gradient-to-r from-purple-400/40 to-pink-400/40 text-white hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 px-8 py-6 rounded-lg h-auto text-lg backdrop-blur-sm transition-all duration-300 transform hover:scale-105"
             >
               Learn More <Sparkles className="ml-2 h-5 w-5" />
             </Button>
           </div>
 
-          {/* YouTube Video Embed */}
+          {/* YouTube Video Embed with divine styling */}
           <div className="w-full max-w-2xl">
-            <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+            <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl border-2 border-gradient-to-r from-purple-400/30 via-pink-400/30 to-blue-400/30" style={{ paddingBottom: '56.25%' }}>
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-blue-500/10 rounded-2xl"></div>
               <iframe
-                className="absolute top-0 left-0 w-full h-full rounded-lg shadow-2xl"
+                className="absolute top-0 left-0 w-full h-full rounded-2xl z-10"
                 src="https://www.youtube.com/embed/qzndRzBtrEU?autoplay=1&mute=0&quality=hd1080&rel=0&showinfo=0"
                 title="Fungus Whisperer GPT Demo"
                 frameBorder="0"
@@ -77,28 +84,28 @@ const HeroSection = () => {
           </div>
         </div>
         
-        <div className={`relative transition-all duration-1000 delay-300 ${isLoaded ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
+        <div className={`relative transition-all duration-1000 delay-300 ${isLoaded ? 'opacity-100 animate-scale-up' : 'opacity-0 translate-y-10'}`}>
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-radial from-fungus-purple/30 to-transparent rounded-full filter blur-[30px] animate-pulse-glow"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-500/40 via-pink-500/30 to-blue-500/40 rounded-full filter blur-[40px] animate-pulse-glow"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/20 via-blue-400/30 to-purple-400/20 rounded-full filter blur-[60px] animate-pulse-glow" style={{ animationDelay: "1s" }}></div>
             <div className="relative z-10 w-72 h-72 sm:w-96 sm:h-96 rounded-full overflow-hidden">
-              <div className="w-full h-full flex items-center justify-center animate-float bg-black/20 backdrop-blur-sm rounded-full border border-white/10">
-                <span className="text-9xl">🍄</span>
+              <div className="w-full h-full flex items-center justify-center animate-float bg-gradient-to-br from-black/30 via-purple-900/20 to-pink-900/30 backdrop-blur-md rounded-full border-2 border-gradient-to-r from-purple-400/40 via-pink-400/40 to-blue-400/40 shadow-2xl">
+                <span className="text-9xl animate-pulse-glow">🍄</span>
               </div>
             </div>
           </div>
-          {/* Fixed positioning of the "Powered by AI" badge */}
-          <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 glass-effect px-5 py-2 rounded-full text-sm backdrop-blur-md">
+          <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 bg-gradient-to-r from-white/20 via-purple-500/20 to-pink-500/20 backdrop-blur-md px-5 py-2 rounded-full text-sm border border-gradient-to-r from-purple-400/30 to-pink-400/30 shadow-xl">
             <div className="flex items-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-fungus-green"></div>
-              <span>Powered by AI</span>
+              <div className="w-2 h-2 rounded-full bg-gradient-to-r from-green-400 to-cyan-400 animate-pulse"></div>
+              <span className="bg-gradient-to-r from-purple-200 to-pink-200 bg-clip-text text-transparent font-medium">Powered by AI</span>
             </div>
           </div>
         </div>
       </div>
       
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
-        <span className="text-white/50 text-sm mb-2">Scroll to explore</span>
-        <div className="scroll-indicator"></div>
+        <span className="text-white/60 text-sm mb-2 bg-gradient-to-r from-purple-200 to-pink-200 bg-clip-text text-transparent">Scroll to explore</span>
+        <div className="scroll-indicator border-gradient-to-r from-purple-400/50 to-pink-400/50"></div>
       </div>
     </section>
   );

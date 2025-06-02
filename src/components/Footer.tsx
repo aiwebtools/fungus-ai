@@ -13,21 +13,27 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-black/40 border-t border-white/10 pt-16 pb-8">
-      <div className="container mx-auto px-4">
+    <footer className="bg-gradient-to-b from-black/40 via-purple-900/20 to-black/60 border-t border-gradient-to-r from-purple-400/20 via-pink-400/20 to-blue-400/20 pt-16 pb-8 relative overflow-hidden">
+      {/* Divine background effects */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-0 left-1/4 w-64 h-64 bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 rounded-full filter blur-[80px] animate-pulse-glow"></div>
+        <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 rounded-full filter blur-[80px] animate-pulse-glow" style={{ animationDelay: "2s" }}></div>
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
           <div className="space-y-4">
             <a
               href="https://chatgpt.com/g/g-67d872788c488191aab35cf0b0ee7152-fungus-whisperer-gpt"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center"
+              className="flex items-center group"
             >
-              <div className="mr-3 w-10 h-10 rounded-full bg-fungus-purple/30 flex items-center justify-center overflow-hidden">
+              <div className="mr-3 w-10 h-10 rounded-full bg-gradient-to-r from-purple-500/30 via-pink-500/30 to-blue-500/30 flex items-center justify-center overflow-hidden animate-pulse-glow group-hover:scale-110 transition-transform">
                 <span className="text-2xl">🍄</span>
               </div>
               <div>
-                <h3 className="text-xl font-bold text-gradient">
+                <h3 className="text-xl font-bold bg-gradient-to-r from-purple-300 via-pink-300 to-blue-300 bg-clip-text text-transparent">
                   Fungus Whisperer GPT
                 </h3>
                 <p className="text-xs text-white/60">
@@ -53,7 +59,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button className="bg-gradient-to-r from-fungus-purple to-fungus-blue hover:opacity-90 transition-opacity">
+                <Button className="bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 hover:from-purple-500 hover:via-pink-500 hover:to-blue-500 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25">
                   Try Now
                 </Button>
               </a>
@@ -61,7 +67,7 @@ const Footer = () => {
           </div>
 
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Quick Links</h3>
+            <h3 className="text-lg font-semibold bg-gradient-to-r from-purple-300 to-pink-300 bg-clip-text text-transparent">Quick Links</h3>
             <ul className="space-y-2">
               <li>
                 <button
@@ -94,7 +100,7 @@ const Footer = () => {
                   href="https://openai.com/policies/privacy-policy/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white/70 hover:text-white transition-colors"
+                  className="text-white/70 hover:text-purple-300 transition-colors"
                 >
                   Privacy Policy
                 </a>
@@ -104,7 +110,7 @@ const Footer = () => {
                   href="https://aiwebtools.lovable.app/disclaimers"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white/70 hover:text-white transition-colors"
+                  className="text-white/70 hover:text-purple-300 transition-colors"
                 >
                   Terms of Service
                 </a>
@@ -113,7 +119,7 @@ const Footer = () => {
           </div>
 
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Contact Us</h3>
+            <h3 className="text-lg font-semibold bg-gradient-to-r from-blue-300 to-cyan-300 bg-clip-text text-transparent">Contact Us</h3>
             <ul className="space-y-3">
               <li>
                 <a
@@ -140,7 +146,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button className="rounded-full bg-gradient-to-r from-fungus-cyan to-fungus-blue hover:opacity-90 transition-opacity">
+                <Button className="rounded-full bg-gradient-to-r from-cyan-600 via-blue-600 to-purple-600 hover:from-cyan-500 hover:via-blue-500 hover:to-purple-500 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25">
                   More AI Tools
                 </Button>
               </a>
@@ -148,7 +154,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-gradient-to-r from-purple-400/20 via-pink-400/20 to-blue-400/20 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-white/60 text-center md:text-left">
             <a
               href="https://www.aiwebtools.ai"
@@ -164,7 +170,7 @@ const Footer = () => {
               href="https://openai.com/policies/privacy-policy/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs text-white/60 hover:text-white transition-colors"
+              className="text-xs text-white/60 hover:text-purple-300 transition-colors"
             >
               Privacy Policy
             </a>
@@ -172,7 +178,7 @@ const Footer = () => {
               href="https://aiwebtools.lovable.app/disclaimers"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs text-white/60 hover:text-white transition-colors"
+              className="text-xs text-white/60 hover:text-purple-300 transition-colors"
             >
               Terms of Service
             </a>
