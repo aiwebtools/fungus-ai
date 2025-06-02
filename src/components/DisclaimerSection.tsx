@@ -31,24 +31,30 @@ const DisclaimerSection = () => {
 
             <div className="space-y-6 text-white/80">
               <p>
-                Fungus Whisperer GPT is provided for educational and informational
+                Fungus Whisperer GPT is an experimental AI tool provided for educational and informational
                 purposes only. The information provided should not be considered as
-                professional or expert advice. Users must exercise caution and
+                professional or expert advice. Users must exercise extreme caution and
                 their own judgment when applying any information or suggestions
                 provided by this AI tool.
               </p>
 
               <div className="space-y-4">
                 <h3 className="text-xl font-semibold text-white">
-                  Mushroom Identification Warning
+                  ⚠️ CRITICAL MUSHROOM IDENTIFICATION WARNING ⚠️
                 </h3>
-                <p>
-                  Never rely solely on AI-based identification for determining
-                  whether a mushroom is safe to consume. Misidentification of
-                  mushrooms can result in severe illness or death. Always consult
-                  multiple expert sources, field guides, and professional
-                  mycologists before consuming any wild mushrooms.
-                </p>
+                <div className="bg-red-900/30 border border-red-500/50 rounded-lg p-4">
+                  <p className="font-semibold text-red-200">
+                    NEVER eat any mushroom based solely on AI identification. This AI tool can be wrong
+                    and misidentification of mushrooms can result in severe illness or death.
+                  </p>
+                  <ul className="mt-3 space-y-2 text-red-100">
+                    <li>• Do NOT rely solely on this AI for mushroom identification</li>
+                    <li>• Do NOT consume any wild mushrooms based on AI recommendations</li>
+                    <li>• Always consult multiple expert sources and field guides</li>
+                    <li>• Always verify with professional mycologists before consumption</li>
+                    <li>• This is an experimental tool and may provide incorrect information</li>
+                  </ul>
+                </div>
               </div>
 
               <div className="space-y-4">
@@ -58,9 +64,9 @@ const DisclaimerSection = () => {
                 <p>
                   AI WEB TOOLS LLC, its affiliates, and partners assume no
                   responsibility or liability for any consequences resulting from
-                  the use of Fungus Whisperer GPT. Users agree to use this tool at
+                  the use of Fungus Whisperer GPT. Users agree to use this experimental tool at
                   their own risk and accept full responsibility for verifying any
-                  information provided.
+                  information provided through multiple independent sources.
                 </p>
               </div>
 
@@ -94,12 +100,12 @@ const DisclaimerSection = () => {
                   and understood this disclaimer and agree to be bound by its
                   terms. For complete terms and conditions, please refer to our{" "}
                   <a
-                    href="https://aiwebtools.ai/terms-of-services"
+                    href="https://aiwebtools.lovable.app/disclaimers"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-fungus-purple hover:underline"
                   >
-                    Terms of Service
+                    Terms of Service & Disclaimers
                   </a>
                   .
                 </p>

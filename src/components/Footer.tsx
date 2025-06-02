@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone } from "lucide-react";
@@ -102,7 +101,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://aiwebtools.ai/terms-of-services"
+                  href="https://aiwebtools.lovable.app/disclaimers"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white/70 hover:text-white transition-colors"
@@ -170,7 +169,7 @@ const Footer = () => {
               Privacy Policy
             </a>
             <a
-              href="https://aiwebtools.ai/terms-of-services"
+              href="https://aiwebtools.lovable.app/disclaimers"
               target="_blank"
               rel="noopener noreferrer"
               className="text-xs text-white/60 hover:text-white transition-colors"
