@@ -65,15 +65,60 @@
 }
 
 .glass-effect {
-  @apply bg-gradient-to-br from-white/15 via-purple-500/10 to-pink-500/15 backdrop-blur-xl border border-gradient-to-r from-purple-400/30 via-pink-400/20 to-blue-400/30 shadow-2xl;
+  @apply bg-gradient-to-br from-white/15 via-purple-500/10 to-pink-500/15 backdrop-blur-xl shadow-2xl;
+  position: relative;
+  border: 1px solid transparent;
+  background-clip: padding-box;
+}
+
+.glass-effect::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -1px;
+  border-radius: inherit;
+  background: linear-gradient(to right, rgba(168, 85, 247, 0.3), rgba(236, 72, 153, 0.2), rgba(59, 130, 246, 0.3));
 }
 
 .glass-card {
-  @apply bg-gradient-to-br from-white/10 via-purple-500/5 to-pink-500/10 backdrop-blur-xl border border-gradient-to-r from-purple-400/20 via-pink-400/15 to-blue-400/20 shadow-xl;
+  @apply bg-gradient-to-br from-white/10 via-purple-500/5 to-pink-500/10 backdrop-blur-xl shadow-xl;
+  position: relative;
+  border: 1px solid transparent;
+  background-clip: padding-box;
+}
+
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -1px;
+  border-radius: inherit;
+  background: linear-gradient(to right, rgba(168, 85, 247, 0.2), rgba(236, 72, 153, 0.15), rgba(59, 130, 246, 0.2));
 }
 
 .glass-navbar {
-  @apply bg-gradient-to-r from-black/50 via-purple-900/30 to-black/50 backdrop-blur-xl border-b border-gradient-to-r from-purple-400/20 via-pink-400/20 to-blue-400/20;
+  @apply bg-gradient-to-r from-black/50 via-purple-900/30 to-black/50 backdrop-blur-xl;
+  border-bottom: 1px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+}
+
+.glass-navbar::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, rgba(168, 85, 247, 0.2), rgba(236, 72, 153, 0.2), rgba(59, 130, 246, 0.2));
 }
 
 .text-gradient {
@@ -105,7 +150,21 @@
 }
 
 .scroll-indicator {
-  @apply w-6 h-10 border-2 border-gradient-to-b from-purple-400/50 via-pink-400/50 to-blue-400/50 rounded-full flex justify-center p-1 backdrop-blur-sm;
+  @apply w-6 h-10 border-2 border-purple-400/50 rounded-full flex justify-center p-1 backdrop-blur-sm;
+  position: relative;
+}
+
+.scroll-indicator::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -2px;
+  border-radius: inherit;
+  background: linear-gradient(to bottom, rgba(168, 85, 247, 0.5), rgba(236, 72, 153, 0.5), rgba(59, 130, 246, 0.5));
 }
 
 .scroll-indicator::after {
