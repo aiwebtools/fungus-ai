@@ -34,37 +34,57 @@ const HeroSection = () => {
           <div className="inline-block rounded-full bg-gradient-to-r from-white/20 via-purple-500/20 to-pink-500/20 backdrop-blur-md border border-gradient-to-r from-purple-400/30 to-pink-400/30 px-4 py-1.5 mb-6 animate-shimmer">
             <div className="flex items-center">
               <div className="w-2 h-2 rounded-full bg-gradient-to-r from-green-400 to-cyan-400 animate-pulse mr-2"></div>
-              <span className="text-sm font-medium bg-gradient-to-r from-purple-200 to-pink-200 bg-clip-text text-transparent">Now Available on ChatGPT</span>
+              <span className="text-sm font-medium bg-gradient-to-r from-purple-200 to-pink-200 bg-clip-text text-transparent">Free AI Tool by AIWEBTOOLS.AI</span>
             </div>
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
             <span className="bg-gradient-to-r from-purple-300 via-pink-300 via-blue-300 to-cyan-300 bg-clip-text text-transparent animate-shimmer">Fungus Whisperer GPT</span>
             <br />
-            <span className="bg-gradient-to-r from-white via-purple-100 to-pink-100 bg-clip-text text-transparent">Your Expert Mushroom Guide</span>
+            <span className="bg-gradient-to-r from-white via-purple-100 to-pink-100 bg-clip-text text-transparent">AI Mushroom Identification Tool</span>
           </h1>
           
           <p className="text-xl text-white/90 mb-8 max-w-xl leading-relaxed">
-            Master the art of mushroom cultivation, learn safe foraging practices, and discover 
-            creative culinary applications with scientifically accurate guidance.
+            Advanced AI-powered mushroom cultivation guide, safe foraging advisor, and 
+            culinary companion. Free educational tool for mycology research and learning.
           </p>
+
+          {/* SEO-optimized feature highlights */}
+          <div className="mb-8">
+            <ul className="space-y-2 text-white/80">
+              <li className="flex items-center">
+                <span className="w-2 h-2 bg-fungus-green rounded-full mr-3"></span>
+                <span>Free AI mushroom identification and cultivation guidance</span>
+              </li>
+              <li className="flex items-center">
+                <span className="w-2 h-2 bg-fungus-blue rounded-full mr-3"></span>
+                <span>Educational foraging safety and research tool</span>
+              </li>
+              <li className="flex items-center">
+                <span className="w-2 h-2 bg-fungus-purple rounded-full mr-3"></span>
+                <span>Powered by AIWEBTOOLS.AI - Leading AI web tools provider</span>
+              </li>
+            </ul>
+          </div>
           
           <div className="flex flex-wrap gap-6 mb-12">
             <a
               href="https://chatgpt.com/g/g-67d872788c488191aab35cf0b0ee7152-fungus-whisperer-gpt"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Try Fungus Whisperer GPT - Free AI Mushroom Tool"
             >
               <Button className="bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 hover:from-purple-500 hover:via-pink-500 hover:to-blue-500 text-white px-8 py-6 rounded-lg transition-all duration-300 transform hover:scale-105 text-lg h-auto shadow-2xl hover:shadow-purple-500/25">
-                Try for Free <ArrowRight className="ml-2 h-5 w-5" />
+                Try Free AI Tool <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </a>
             <Button 
               variant="outline" 
               onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
               className="border-2 border-gradient-to-r from-purple-400/40 to-pink-400/40 text-white hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 px-8 py-6 rounded-lg h-auto text-lg backdrop-blur-sm transition-all duration-300 transform hover:scale-105"
+              aria-label="Learn more about AI web tools features"
             >
-              Learn More <Sparkles className="ml-2 h-5 w-5" />
+              Explore Features <Sparkles className="ml-2 h-5 w-5" />
             </Button>
           </div>
 
@@ -75,7 +95,7 @@ const HeroSection = () => {
               <iframe
                 className="absolute top-0 left-0 w-full h-full rounded-2xl z-10"
                 src="https://www.youtube.com/embed/qzndRzBtrEU?autoplay=1&mute=0&quality=hd1080&rel=0&showinfo=0"
-                title="Fungus Whisperer GPT Demo"
+                title="Fungus Whisperer GPT Demo - Free AI Mushroom Identification Tool by AIWEBTOOLS.AI"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
@@ -90,21 +110,21 @@ const HeroSection = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/20 via-blue-400/30 to-purple-400/20 rounded-full filter blur-[60px] animate-pulse-glow" style={{ animationDelay: "1s" }}></div>
             <div className="relative z-10 w-72 h-72 sm:w-96 sm:h-96 rounded-full overflow-hidden">
               <div className="w-full h-full flex items-center justify-center animate-float bg-gradient-to-br from-black/30 via-purple-900/20 to-pink-900/30 backdrop-blur-md rounded-full border-2 border-gradient-to-r from-purple-400/40 via-pink-400/40 to-blue-400/40 shadow-2xl">
-                <span className="text-9xl animate-pulse-glow">🍄</span>
+                <span className="text-9xl animate-pulse-glow" role="img" aria-label="Mushroom">🍄</span>
               </div>
             </div>
           </div>
           <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 bg-gradient-to-r from-white/20 via-purple-500/20 to-pink-500/20 backdrop-blur-md px-5 py-2 rounded-full text-sm border border-gradient-to-r from-purple-400/30 to-pink-400/30 shadow-xl">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-gradient-to-r from-green-400 to-cyan-400 animate-pulse"></div>
-              <span className="bg-gradient-to-r from-purple-200 to-pink-200 bg-clip-text text-transparent font-medium">Powered by AI</span>
+              <span className="bg-gradient-to-r from-purple-200 to-pink-200 bg-clip-text text-transparent font-medium">AI-Powered Technology</span>
             </div>
           </div>
         </div>
       </div>
       
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
-        <span className="text-white/60 text-sm mb-2 bg-gradient-to-r from-purple-200 to-pink-200 bg-clip-text text-transparent">Scroll to explore</span>
+        <span className="text-white/60 text-sm mb-2 bg-gradient-to-r from-purple-200 to-pink-200 bg-clip-text text-transparent">Explore AI Tools</span>
         <div className="scroll-indicator border-gradient-to-r from-purple-400/50 to-pink-400/50"></div>
       </div>
     </section>
