@@ -12,7 +12,7 @@ import ConsentPopup from "@/components/ConsentPopup";
 
 const Index = () => {
   useEffect(() => {
-    document.title = "Fungus Whisperer GPT | Your Expert Mushroom Guide";
+    document.title = "Fungus Whisperer GPT - Free AI Mushroom Identification Tool";
   }, []);
 
   return (

@@ -3,6 +3,8 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone } from "lucide-react";
 
+const AIWEBTOOLS_URL = "https://aiwebtools.lovable.app/?via=aiwebtools";
+
 const Footer = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -14,7 +16,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gradient-to-b from-black/40 via-purple-900/20 to-black/60 border-t border-gradient-to-r from-purple-400/20 via-pink-400/20 to-blue-400/20 pt-16 pb-8 relative overflow-hidden">
+    <footer className="bg-gradient-to-b from-black/40 via-purple-900/20 to-black/60 border-t border-white/10 pt-12 sm:pt-16 pb-6 sm:pb-8 relative overflow-hidden">
       {/* Divine background effects */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-0 left-1/4 w-64 h-64 bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 rounded-full filter blur-[80px] animate-pulse-glow"></div>
@@ -22,8 +24,8 @@ const Footer = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
-          <div className="space-y-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 mb-8 sm:mb-10">
+          <div className="space-y-4 sm:col-span-2 lg:col-span-1">
             <a
               href="https://chatgpt.com/g/g-67d872788c488191aab35cf0b0ee7152-fungus-whisperer-gpt"
               target="_blank"
@@ -31,20 +33,21 @@ const Footer = () => {
               className="flex items-center group"
               aria-label="Fungus Whisperer GPT - AI Mushroom Tool"
             >
-              <div className="mr-3 w-10 h-10 rounded-full bg-gradient-to-r from-purple-500/30 via-pink-500/30 to-blue-500/30 flex items-center justify-center overflow-hidden animate-pulse-glow group-hover:scale-110 transition-transform">
+              <div className="mr-3 w-10 h-10 rounded-full bg-gradient-to-r from-purple-500/30 via-pink-500/30 to-blue-500/30 flex items-center justify-center overflow-hidden animate-pulse-glow group-hover:scale-110 transition-transform shrink-0">
                 <span className="text-2xl" role="img" aria-label="Mushroom">🍄</span>
               </div>
-              <div>
-                <h3 className="text-xl font-bold bg-gradient-to-r from-purple-300 via-pink-300 to-blue-300 bg-clip-text text-transparent">
+              <div className="min-w-0">
+                <h3 className="text-lg sm:text-xl font-bold bg-gradient-to-r from-purple-300 via-pink-300 to-blue-300 bg-clip-text text-transparent">
                   Fungus Whisperer GPT
                 </h3>
-                <p className="text-xs text-white/60">
+                <p className="text-xs text-white/60 truncate">
                   Free AI Tool by{" "}
                   <a
-                    href="https://www.aiwebtools.ai"
+                    href={AIWEBTOOLS_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="underline hover:text-fungus-cyan transition-colors"
+                    onClick={(e) => e.stopPropagation()}
                   >
                     AIWEBTOOLS.AI
                   </a>
@@ -72,7 +75,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://www.aiwebtools.ai"
+                  href={AIWEBTOOLS_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white/70 hover:text-white transition-colors"
@@ -82,7 +85,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://www.aiwebtools.ai"
+                  href={AIWEBTOOLS_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white/70 hover:text-white transition-colors"
@@ -144,7 +147,7 @@ const Footer = () => {
                   className="flex items-center text-white/70 hover:text-white transition-colors"
                   aria-label="Call AIWEBTOOLS.AI"
                 >
-                  <Phone size={18} className="mr-2" />
+                  <Phone size={18} className="mr-2 shrink-0" />
                   (475) 800-8096
                 </a>
               </li>
@@ -154,19 +157,19 @@ const Footer = () => {
                   className="flex items-center text-white/70 hover:text-white transition-colors"
                   aria-label="Email AIWEBTOOLS.AI"
                 >
-                  <Mail size={18} className="mr-2" />
-                  Contact@ai-webtools.com
+                  <Mail size={18} className="mr-2 shrink-0" />
+                  <span className="truncate">Contact@ai-webtools.com</span>
                 </a>
               </li>
             </ul>
             <div className="pt-4">
               <a
-                href="https://www.aiwebtools.ai"
+                href={AIWEBTOOLS_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Explore more free AI web tools"
               >
-                <Button className="rounded-full bg-gradient-to-r from-cyan-600 via-blue-600 to-purple-600 hover:from-cyan-500 hover:via-blue-500 hover:to-purple-500 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25">
+                <Button className="rounded-full bg-gradient-to-r from-cyan-600 via-blue-600 to-purple-600 hover:from-cyan-500 hover:via-blue-500 hover:to-purple-500 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 w-full sm:w-auto">
                   More Free AI Tools
                 </Button>
               </a>
@@ -174,10 +177,10 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-gradient-to-r from-purple-400/20 via-pink-400/20 to-blue-400/20 pt-6 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm text-white/60 text-center md:text-left">
+        <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3">
+          <p className="text-xs sm:text-sm text-white/60 text-center sm:text-left">
             <a
-              href="https://www.aiwebtools.ai"
+              href={AIWEBTOOLS_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition-colors"
@@ -185,7 +188,7 @@ const Footer = () => {
               © {currentYear} AIWEBTOOLS.AI - AI WEB TOOLS LLC. All rights reserved.
             </a>
           </p>
-          <div className="flex space-x-4 mt-4 md:mt-0">
+          <div className="flex space-x-4">
             <span className="text-xs text-white/60">Free AI Web Tools Provider</span>
           </div>
         </div>
